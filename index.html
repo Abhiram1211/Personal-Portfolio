@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Killi Abhiram | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: #0a1f44; color: #ffffff; display: flex; height: 100vh; overflow: hidden; }
+    .sidebar { width: 30%; background-color: #112b5a; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+    .sidebar img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 1rem; object-fit: cover; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+    .sidebar h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .sidebar p { margin: 0.3rem 0; color: #cbd5e1; }
+    .sidebar a.btn { margin-top: 1rem; display: inline-block; padding: 0.5rem 1rem; background: #2563eb; color: #fff; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
+    .sidebar a.btn:hover { background: #1d4ed8; }
+
+    .content { width: 70%; padding: 2rem; position: relative; }
+    .tabs { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .tab-button { background: #1a3b74; color: #fff; padding: 0.7rem 1.5rem; border: none; cursor: pointer; font-weight: bold; border-radius: 6px; transition: background 0.3s; }
+    .tab-button:hover { background: #2552a3; }
+
+    .tab-content { position: absolute; width: 100%; opacity: 0; transform: translateX(100%); transition: all 0.5s ease-in-out; background: #12274f; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    .tab-content.active { opacity: 1; transform: translateX(0); z-index: 1; }
+
+    h2 { color: #f1f5f9; margin-bottom: 1rem; border-bottom: 2px solid #3b82f6; display: inline-block; }
+    ul li { margin-left: 1.5rem; margin-bottom: 0.5rem; }
+
+    .project-card { background: #1c3a6b; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; transition: transform 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-title { cursor: pointer; color: #60a5fa; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: bold; }
+    .project-details { display: none; color: #cbd5e1; font-size: 0.95rem; padding-top: 0.5rem; }
+
+    form input, form textarea { width: 100%; margin: 0.5rem 0; padding: 0.5rem; border: none; border-radius: 4px; }
+    form button { padding: 0.5rem 1rem; background: #2563eb; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    form button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="passportsize-AbhiramKilli_1.jpg" alt="Abhiram Killi">
+    <h1>Killi Abhiram</h1>
+    <p>Hyderabad, India</p>
+    <p>Email: abhiramkilli012@gmail.com</p>
+    <p>Phone: +91 95532 7854</p>
+    <p><a href="https://github.com/AbhiramKilli" target="_blank" style="color:#60a5fa">GitHub</a></p>
+    <p><a href="https://www.linkedin.com/in/abhiramkilli" target="_blank" style="color:#60a5fa">LinkedIn</a></p>
+    <a class="btn" href="Killi_Abhiram_Resume.pdf" download>Download Resume</a>
+  </div>
+
+  <div class="content">
+    <div class="tabs">
+      <button class="tab-button" onclick="showTab('projects')">Projects</button>
+      <button class="tab-button" onclick="showTab('certificates')">Certificates</button>
+      <button class="tab-button" onclick="showTab('education')">Education</button>
+      <button class="tab-button" onclick="showTab('skills')">Skills</button>
+      <button class="tab-button" onclick="showTab('contact')">Contact</button>
+    </div>
+
+    <div id="projects" class="tab-content active">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <div class="project-title" onclick="toggleDetails('p1')">Weed Detection</div>
+        <div id="p1" class="project-details">Used CNN and YOLOv5 to detect and classify weeds in agricultural images with bounding boxes for precise targeting.</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title" onclick="toggleDetails('p2')">Portfolio Website</div>
+        <div id="p2" class="project-details">Designed a responsive portfolio using HTML, CSS, and JS with animations and interactive tabs for project showcase.</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title" onclick="toggleDetails('p3')">Heart Rate Monitoring</div>
+        <div id="p3" class="project-details">Developed a non-contact heart rate estimation system using facial video analysis with CGAN and CNN-based models.</div>
+      </div>
+    </div>
+
+    <div id="certificates" class="tab-content">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Cisco Python Essentials - OpenEDG Python Institute</li>
+        <li>Oracle SQL Programming - Oracle Academy</li>
+        <li>Python Zero to Hero - LetsUpgrade</li>
+        <li>Tech Quiz Gold Medal - EduFabrica at IIT Hyderabad</li>
+        <li>Data Science Workshop - EduFabrica at IIT Hyderabad</li>
+      </ul>
+    </div>
+
+    <div id="education" class="tab-content">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in ECE</strong> - CVR College of Engineering (2021–2025) | CGPA: 8.59</li>
+        <li><strong>Higher Secondary</strong> - Narayana Junior College (2019–2021) | 96.6%</li>
+        <li><strong>Secondary School</strong> - St Gabrial Educational High School (2018–2019) | GPA: 9.8</li>
+      </ul>
+    </div>
+
+    <div id="skills" class="tab-content">
+      <h2>Skills</h2>
+      <ul>
+        <li>Languages: C#, Java, Python, C, MATLAB</li>
+        <li>Web: HTML, CSS, .NET</li>
+        <li>Database: MySQL</li>
+        <li>Concepts & Tools: DSA, Verilog, RTL, VLSI, FPGA, CNN</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="tab-content">
+      <h2>Contact Form</h2>
+      <form onsubmit="event.preventDefault(); alert('Message sent successfully!')">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
