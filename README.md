@@ -15,7 +15,7 @@ Welcome to my personal portfolio website! This site is a reflection of my journe
 
 ## 🌍 Live Site
 
-👉 Visit: [https://abhiram1211.github.io/Personal-Portfolio/]
+👉 Visit:[Abhiram's Personal Portfolio](https://abhiram1211.github.io/Personal-Portfolio/)
 
 ## 🛠️ Built With
 
@@ -28,4 +28,4 @@ Welcome to my personal portfolio website! This site is a reflection of my journe
 📩 **Contact Me**:  
 Email: abhiramkilli012@gmail.com  
 LinkedIn: [Abhiram Killi](https://www.linkedin.com/in/abhiram-killi-336097301/)  
-GitHub: [Abhiram1211](https://github.com/AbhiramKilli)
+GitHub: [Abhiram1211](https://github.com/Abhiram1211)
